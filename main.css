@@ -1,0 +1,31 @@
+body {
+  background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/Eakin%27s_art_studens_bathing_3.jpg/1280px-Eakin%27s_art_studens_bathing_3.jpg");
+  background-size: cover;
+}
+.container {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 1.5em;
+}
+header {
+  color: white;
+  font-family: Mirza, fantasy;
+  margin: 5% 0;
+}
+header.text-center h1 {
+  font-size: 2.3em;
+}
+.thumbnail {
+  padding: auto 5%;
+  background-color: rgba(255, 255, 255, 0.8) !important;
+}
+span.canusa:last-child {
+  display: none;
+}
+strong {
+  font-family: Mirza, fantasy;
+  font-size: 1.2em;
+  font-weight: bolder;
+}
+#unitShift {
+  font-size: .7em;
+}
