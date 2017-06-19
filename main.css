@@ -1,5 +1,8 @@
 body {
-  background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/Eakin%27s_art_studens_bathing_3.jpg/1280px-Eakin%27s_art_studens_bathing_3.jpg");
+  background: url("https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/Eakin%27s_art_studens_bathing_3.jpg/1280px-Eakin%27s_art_studens_bathing_3.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
   background-size: cover;
 }
 .container {
@@ -28,4 +31,8 @@ strong {
 }
 #unitShift {
   font-size: .7em;
+}
+
+.row {
+  margin-bottom: 10%;
 }
