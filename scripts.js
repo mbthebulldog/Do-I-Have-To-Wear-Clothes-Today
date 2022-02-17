@@ -1,12 +1,26 @@
 var latitude = 33;
 var longitude = -97;
 
-$.ajax("http://ip-api.com/json", function(data){
-  console.log(data + "get");
+//Get location data
+$.getJSON("ip-api.com/json", function(position) {
+    //JSON result in 'position' variable
+    console.log("---JSON---"); console.log(data); //Debug
+    
+    if (position.status === "success") {
+      console.log("success");
+      latitude = position.lat;
+      longitude = position.lon;
+      console.log(latitude + " local latitude");
+      console.log(longitude + " local longitude");
+    } else {
+      console.log("location query unsuccessful");
+    }
 });
 
+/*
 $.ajax({
   dataType: "json",
+  method: 'GET',
   url: "http://ip-api.com/json",
   success: function(position) {
     console.log(position + "ajax");
@@ -74,6 +88,7 @@ $.ajax({
     }
   }
 });
+*/
 
     $( "#unitShift" ).click(function() {
       $( ".canusa" ).toggle();
@@ -81,20 +96,18 @@ $.ajax({
 
 console.log(latitude + " global (final latitude)");
 
+/*
+window.onload = function() {
+  var startPos;
+  var geoSuccess = function(position) {
+    startPos = position;
+    document.getElementById('startLat').innerHTML = startPos.coords.latitude;
+    document.getElementById('startLon').innerHTML = startPos.coords.longitude;
+  };
+  navigator.geolocation.getCurrentPosition(geoSuccess);
+};
 
-
-
-
-
-// window.onload = function() {
-//   var startPos;
-//   var geoSuccess = function(position) {
-//     startPos = position;
-//     document.getElementById('startLat').innerHTML = startPos.coords.latitude;
-//     document.getElementById('startLon').innerHTML = startPos.coords.longitude;
-//   };
-//   navigator.geolocation.getCurrentPosition(geoSuccess);
-// };
-// navigator.geolocation.getCurrentPosition(function(position) {
-//   do_something(position.coords.latitude, position.coords.longitude);
-// });
+navigator.geolocation.getCurrentPosition(function(position) {
+  do_something(position.coords.latitude, position.coords.longitude);
+});
+*/
