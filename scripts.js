@@ -1,3 +1,4 @@
+weatherKey = '';
 var latitude = 33;
 var longitude = -97;
 const x = document.getElementById("weatherDescription");
@@ -12,7 +13,7 @@ function getLocation() {
 
 $.ajax({
   dataType: "json",
-  url: "http://api.openweathermap.org/data/2.5/weather?lat=" + latitude + "&lon=" + longitude + "&APPID=677efae9eb136f59f2d1c9aefbabef40&units=imperial",
+  url: "http://api.openweathermap.org/data/2.5/weather?lat=" + latitude + "&lon=" + longitude + "&APPID=' + weatherKey + '&units=imperial",
   success: function(data) {
 
     //parse string input

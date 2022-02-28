@@ -6,8 +6,9 @@ body {
   background-size: cover;
 }
 .container {
-  font-family: "Josefin Sans", sans-serif;
+  font-family: "ValentineHand", sans-serif;
   font-size: 1.5em;
+  src: url('//2ttf.com/webfont/LHfdnEVX5Uy/webfont.ttf') format('truetype');
 }
 header {
   color: white;
